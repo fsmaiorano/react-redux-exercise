@@ -5,7 +5,8 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case 'MUDAR_TEXTO':
-            return {texto: action.payload}
+            console.log("reducer", { texto: action.payload })
+            return { texto: action.payload }
         default:
             return state
     }

@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 class Component2 extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
-            <p>Componente 2</p>
-            <h1>{this.props.texto}</h1>
+                <p>Componente 2</p>
+                <h1>{this.props.texto}</h1>
             </div>
         )
     }
@@ -15,8 +15,8 @@ class Component2 extends Component {
 const mapStateToProps = (state) => {
     const { texto } = state;
     return {
-      texto
+        texto
     }
-  }
+}
 
 export default connect(mapStateToProps)(Component2);
