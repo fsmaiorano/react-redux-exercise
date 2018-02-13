@@ -6,8 +6,8 @@ import Component1 from './components/component_1';
 import Component2 from './components/component_2';
 
 class App extends Component {
-  mudarTexto() {
-    this.props.dispatch(mudarTexto('Novo texto!!!'))
+  mudarTexto(text) {
+    this.props.dispatch(mudarTexto(text))
   }
   render() {
     return (
@@ -25,7 +25,9 @@ class App extends Component {
         <Component2/>
         </div>
         
-        <button onClick={() => this.mudarTexto()}>Mudar texto</button>
+        <button onClick={() => this.mudarTexto('Mudar texto')}>Mudar texto</button>
+        <button onClick={() => this.mudarTexto('Outro Texto')}>Outro Texto</button>
+        <button onClick={() => this.mudarTexto('Mais Texto')}>Mais Texto</button>
       </div>
     )
   }
